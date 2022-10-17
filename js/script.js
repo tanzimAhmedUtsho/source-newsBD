@@ -1,8 +1,8 @@
-/* hiding spinner at beginning */
+// hiding spinner at beginning
 document.getElementById("loading-spinner").style.display = "none";
 
 const showCategories = () => {
-  /* fetching data from url  */
+//   fetching data from url 
   const url = `https://openapi.programming-hero.com/api/news/categories`;
   fetch(url)
     .then((res) => res.json())
@@ -17,19 +17,19 @@ showCategories();
 const displayCategories = (categories) => {
   const allCategory = categories.data.news_category;
 
-  /* for each loop to load all books */
+//   for each loop to load all books
   allCategory.forEach((category) => {
-    /* calling load books function to load all books */
+    // calling load books function to load all books
     loadCategories(category);
   });
 };
 
 const loadCategories = (category) => {
-  /* create new div to set book data */
+//   create new div to set book data
   const div = document.createElement("div");
   const showBookContainer = document.getElementById("show-category");
 
-  /* adding inner html to new div */
+//   adding inner html to new div
   div.innerHTML = `
       <div class="mt-2">
           <button class="border-0 bg-transparent" onclick="showNews(${category.category_id})">
@@ -38,32 +38,32 @@ const loadCategories = (category) => {
       </div>
   `;
 
-  /* append created div */
+//   append created div
   showBookContainer.appendChild(div);
-  /* hiding spinner after loading data */
+//   hiding spinner after loading data
   document.getElementById("loading-spinner").style.display = "none";
 };
 
 const showResultOrErrorMessage = (message) => {
-  /* spinner before loading data  */
+//   spinner before loading data 
   document.getElementById("loading-spinner").style.display = "block";
   document.getElementById("total-book-or-error-message").textContent = "";
   const numberOfResultShowing = document.getElementById(
     "total-book-or-error-message"
   );
 
-  /* create new div  */
+//   create new div 
   const newDiv = document.createElement("div");
 
-  /* setting innerHTML inside created div */
+//   setting innerHTML inside created div
   newDiv.innerHTML = `
           <h4 class="text-danger text-center">${message}</h4>
       `;
 
-  /* appending created div  */
+//   appending created div 
   numberOfResultShowing.appendChild(newDiv);
 
-  /* hiding spinner */
+//   hiding spinner
   document.getElementById("loading-spinner").style.display = "none";
 };
 
@@ -88,21 +88,21 @@ const displayNews = (news) => {
     );
   }
 
-  /* for each loop to load all books */
+//   for each loop to load all books
   allNews.forEach((book) => {
-    /* calling load books function to load all books */
+    // calling load books function to load all books
     loadNews(book);
   });
 };
 
 const loadNews = (category) => {
   console.log(category);
-  /* create new div to set book data */
+//   create new div to set book data
   const div = document.createElement("div");
   const showBookContainer = document.getElementById("show-news");
   div.classList.add("col");
 
-  /* adding inner html to new div */
+//   adding inner html to new div
   div.innerHTML = `
   <div class="card h-100 shadow" >
   <button type="button" class="btn border-0 text-start" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -157,7 +157,7 @@ const loadNews = (category) => {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      Coming Soon...
+      Coming Soon....
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -168,8 +168,8 @@ const loadNews = (category) => {
 </div>
   `;
 
-  /* append created div */
+//   append created div
   showBookContainer.appendChild(div);
-  /* hiding spinner after loading data */
+//   hiding spinner after loading data
   document.getElementById("loading-spinner").style.display = "none";
 };
