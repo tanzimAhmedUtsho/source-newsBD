@@ -1,4 +1,4 @@
-/* hidding spinner at begining */
+/* hiding spinner at beginning */
 document.getElementById("loading-spinner").style.display = "none";
 
 const showCategories = () => {
@@ -104,8 +104,8 @@ const loadNews = (category) => {
 
   /* adding inner html to new div */
   div.innerHTML = `
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
   <div class="card h-100 shadow" >
+  <button type="button" class="btn border-0 text-start" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
   <div class="row g-0">
     <div class="col-md-4 d-flex align-items-center">
     <img src="${
@@ -147,17 +147,17 @@ const loadNews = (category) => {
   </div>
   
   
+  </button>
 </div>
-</button>
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">News</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+      Coming Soon...
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
