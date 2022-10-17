@@ -16,65 +16,37 @@
   </head>
   <body>
     <header>
-      <!-- navigation add  -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img
-              src="image/news0.png"
-              alt=""
-              width="30"
-              height="24"
-            />
-          </a>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+          <a class="navbar-brand fs-2" href="#">Source NewsBD</a>
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarScroll"
-            aria-controls="navbarScroll"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul
-              class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
-              style="--bs-scroll-height: 100px"
-            >
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="index.html
-              
-    
-                
-                "
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
-              </li>
-              
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+            <div class="d-flex" role="search">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Blog</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
-
-    
     </header>
     <main>
       <section
@@ -86,22 +58,22 @@
         class="container mt-3"
       ></section>
 
+      <!-- loading spinner -->
       <section class="d-flex justify-content-center">
-        <div role="status">
-          <button class="btn btn-info" type="button" disabled>
+        <div id="loading-spinner" role="status">
+          <button class="btn btn-primary" type="button" disabled>
             <span
               class="spinner-grow spinner-grow-sm"
               role="status"
               aria-hidden="true"
             ></span>
-            Loading, Please Wait Sometimes.....
+            Loading, Please Wait a moment...
           </button>
         </div>
       </section>
-    </section>
-    <section class="container mt-4">
-      <div class="row row-cols-1 row-cols-md-2 g-4"></div>
-    </section>
+      <section class="container mt-4">
+        <div id="show-news" class="row row-cols-1 row-cols-md-2 g-4"></div>
+      </section>
     </main>
 
     <!--------
