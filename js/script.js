@@ -79,7 +79,7 @@ const showNews = (id) => {
 };
 
 const displayNews = (news) => {
-  const allNews = news.data;
+  const allNews = news.data.sort((a,b) => {return b.total_view-a.total_view});
   if (allNews.length === 0) {
     showResultOrErrorMessage("Sorry!!!!! No result Found");
   } else {
